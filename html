@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ELF_KAR Vape Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .description {
+            margin: 20px;
+            font-size: 18px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #2196f3;
+            color: white;
+        }
+        nav button:hover {
+            background-color: #0b7dda;
+        }
+        .product-container {
+            display: none;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .product-container img {
+            max-width: 100px;
+            float: left;
+            margin-right: 15px;
+        }
+        .product-container h2 {
+            margin-top: 0;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Вас вітає ELF_KAR</h1>
+        <p>Тут ви можете придбати рідини для вейпів</p>
+    </header>
+
+    <nav>
+        <button onclick="showProduct('chaser')">CHASER</button>
+        <button onclick="showProduct('phantom')">PHANTOM</button>
+        <button onclick="showProduct('elfliq')">ELF_LIQ</button>
+    </nav>
+
+    <div id="chaser" class="product-container clearfix">
+        <img src="https://via.placeholder.com/100?text=CHASER" alt="CHASER">
+        <h2>CHASER</h2>
+        <p>CHASER – насичена фруктова рідина з приємним післясмаком. Підійде для тих, хто любить солодкі та яскраві аромати.</p>
+    </div>
+
+    <div id="phantom" class="product-container clearfix">
+        <img src="https://via.placeholder.com/100?text=PHANTOM" alt="PHANTOM">
+        <h2>PHANTOM</h2>
+        <p>PHANTOM – насичена тютюнова рідина з легкими нотками ванілі. Для шанувальників класичного смаку з родзинкою.</p>
+    </div>
+
+    <div id="elfliq" class="product-container clearfix">
+        <img src="https://via.placeholder.com/100?text=ELF_LIQ" alt="ELF_LIQ">
+        <h2>ELF_LIQ</h2>
+        <p>ELF_LIQ – освіжаюча м’ятна рідина з фруктовими нотками. Ідеальна для літніх днів та охолодження під час паріння.</p>
+    </div>
+
+    <script>
+        function showProduct(id) {
+            const products = document.querySelectorAll('.product-container');
+            products.forEach(p => p.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
